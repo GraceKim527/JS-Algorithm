@@ -13,9 +13,8 @@ function solution(elements) {
 
     for (let start = 1; start < n; start++) {
       winSum =
-        winSum -
-        extendElements[start - 1] +
-        extendElements[start + length - sumElements.add(winSum)];
+        winSum - extendElements[start - 1] + extendElements[start + length - 1];
+      sumElements.add(winSum);
     }
   }
   return sumElements.size;
